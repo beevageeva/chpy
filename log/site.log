@@ -537,3 +537,63 @@ IOError: [Errno 13] Permission denied: u'/var/www/chpy/sessions/session-3cf66fc6
 [31/Jul/2015:15:21:29]  HAS USERNAME2 KEY bpb
 [31/Jul/2015:15:22:55]  HAS USERNAME2 KEY bpb
 [31/Jul/2015:15:23:00]  HAS USERNAME2 KEY None
+[31/Jul/2015:15:27:50] ENGINE Error in background task thread function <bound method FileSession.clean_up of <cherrypy.lib.sessions.FileSession object at 0x7ff5a4f50110>>.
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/process/plugins.py", line 500, in run
+    self.function(*self.args, **self.kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/sessions.py", line 558, in clean_up
+    for fname in os.listdir(self.storage_path):
+OSError: [Errno 2] No such file or directory: '/var/www/chpy/sessions'
+
+[31/Jul/2015:15:28:00] ENGINE Error in background task thread function <bound method FileSession.clean_up of <cherrypy.lib.sessions.FileSession object at 0x7ff5a4f50110>>.
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/process/plugins.py", line 500, in run
+    self.function(*self.args, **self.kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/sessions.py", line 558, in clean_up
+    for fname in os.listdir(self.storage_path):
+OSError: [Errno 2] No such file or directory: '/var/www/chpy/sessions'
+
+[31/Jul/2015:15:28:14] ENGINE Error in background task thread function <bound method FileSession.clean_up of <cherrypy.lib.sessions.FileSession object at 0x7ff5a4f50110>>.
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/process/plugins.py", line 500, in run
+    self.function(*self.args, **self.kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/sessions.py", line 558, in clean_up
+    for fname in os.listdir(self.storage_path):
+OSError: [Errno 2] No such file or directory: '/var/www/chpy/sessions'
+
+[31/Jul/2015:15:28:23] ENGINE Error in background task thread function <bound method FileSession.clean_up of <cherrypy.lib.sessions.FileSession object at 0x7ff5a4efff90>>.
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/process/plugins.py", line 500, in run
+    self.function(*self.args, **self.kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/sessions.py", line 558, in clean_up
+    for fname in os.listdir(self.storage_path):
+OSError: [Errno 2] No such file or directory: '/var/www/chpy/sessions'
+
+[31/Jul/2015:15:28:33] ENGINE Error in background task thread function <bound method FileSession.clean_up of <cherrypy.lib.sessions.FileSession object at 0x7ff5a4f00fd0>>.
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/process/plugins.py", line 500, in run
+    self.function(*self.args, **self.kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/sessions.py", line 558, in clean_up
+    for fname in os.listdir(self.storage_path):
+OSError: [Errno 2] No such file or directory: '/var/www/chpy/sessions'
+
+[31/Jul/2015:15:29:00]  Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 104, in run
+    hook()
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 63, in __call__
+    return self.callback(**self.kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cptools.py", line 286, in _lock_session
+    cherrypy.serving.session.acquire_lock()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/sessions.py", line 539, in acquire_lock
+    self.lock = lockfile.LockFile(path)
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/lockfile.py", line 75, in __init__
+    self.fp = open(path, 'a+')
+IOError: [Errno 2] No such file or directory: u'/var/www/chpy/sessions/session-c7eb11ecfeab6bac6e597ef6502a0c63c6474197.lock'
+
+[31/Jul/2015:15:29:00] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 667, in respond
+    self.hooks.run('before_handler')
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 114, in run
+    raise exc
+IOError: [Errno 2] No such file or directory: u'/var/www/chpy/sessions/session-c7eb11ecfeab6bac6e597ef6502a0c63c6474197.lock'
+
