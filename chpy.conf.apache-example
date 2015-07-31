@@ -1,0 +1,17 @@
+
+
+	Alias /chpy/static /var/www/chpy/public/
+    <Directory /var/www/html/chpy/public/>
+			Require all granted	
+			Options FollowSymLinks
+			SetHandler None	
+			AddOutputFilterByType DEFLATE text/html text/css text/plain
+    </Directory>
+
+
+    WSGIScriptAlias /chpy /var/www/chpy/app.py
+		SetEnv appcontext chpy
+
+    <Directory /var/www/html/chpy>
+			Require all granted	
+    </Directory>

@@ -7,7 +7,7 @@ SENDMAIL=/usr/sbin/sendmail
   {
    :0 h c
      | (formail -t -r -A"X-Loop: noreply@cca.iac.es " ; \
-      cat /home/forward_msg/{{username}} ) | $SENDMAIL -t -f {{username}}@cca.iac.es
+      cat {{msgfilepath}} ) | $SENDMAIL -t -f {{username}}@cca.iac.es
     :0
      new
   }

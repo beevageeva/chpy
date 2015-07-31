@@ -1,1 +1,1 @@
-"|IFS=' ' && exec /usr/bin/procmail /home/forward_procmail/{{username}} || exit 75 #{{username}}"
+"|IFS=' ' && exec /usr/bin/procmail {{procfilepath}} || exit 75 #{{username}}"

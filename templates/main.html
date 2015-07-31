@@ -25,11 +25,7 @@
 
 		<form action="generate" method="post">
 		Message: 
-		<textarea name="msg" rows="10" cols="60">
-		{% if msg %}
-			{{msg}}
-		{% endif  %}	 	
-		</textarea>		
+		<textarea name="msg" rows="10" cols="60">{{ msg if msg else ""}}</textarea>		
 		<br/>
 		<input type="submit" value="generate"/>
 		</form>			
