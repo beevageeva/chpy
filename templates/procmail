@@ -1,0 +1,14 @@
+MAILDIR=$HOME/Maildir
+ORGMAIL=$MAILDIR
+SENDMAIL=/usr/sbin/sendmail
+:0
+* ^TO_{{username}}@cca.iac.es
+* !^FROM_DAEMON
+  {
+   :0 h c
+     | (formail -t -r -A"X-Loop: noreply@cca.iac.es " ; \
+      cat /home/forward_msg/{{username}} ) | $SENDMAIL -t -f {{username}}@cca.iac.es
+    :0
+     new
+  }
+

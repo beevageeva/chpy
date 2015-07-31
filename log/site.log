@@ -1,0 +1,539 @@
+[31/Jul/2015:09:12:13] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 31, in generate
+    some_string = ''.join(random.sample(string.hexdigits, int(length)))
+NameError: global name 'random' is not defined
+
+[31/Jul/2015:09:13:25] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 31, in generate
+    some_string = ''.join(random.sample(string.hexdigits, int(length)))
+NameError: global name 'string' is not defined
+
+[31/Jul/2015:09:13:56] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 31, in generate
+    some_string = ''.join(random.sample(string.hexdigits, int(length)))
+  File "/usr/lib64/python2.7/random.py", line 323, in sample
+    raise ValueError("sample larger than population")
+ValueError: sample larger than population
+
+[31/Jul/2015:09:17:57] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 31, in generate
+    some_string = "PARAM%d" % length
+TypeError: %d format: a number is required, not unicode
+
+[31/Jul/2015:09:18:24] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:09:18:49] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:09:53:33] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:09:53:42] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:09:55:11] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:10:04:57] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:10:04:57] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 48, in index
+    return open("html/str.html")
+IOError: [Errno 2] No such file or directory: 'html/str.html'
+
+[31/Jul/2015:10:10:06] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 51, in index
+    return open("html/str.html")
+IOError: [Errno 2] No such file or directory: 'html/str.html'
+
+[31/Jul/2015:10:10:08] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 51, in index
+    return open("html/str.html")
+IOError: [Errno 2] No such file or directory: 'html/str.html'
+
+[31/Jul/2015:10:10:08] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 51, in index
+    return open("html/str.html")
+IOError: [Errno 2] No such file or directory: 'html/str.html'
+
+[31/Jul/2015:10:10:08] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:10:10:08] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 51, in index
+    return open("html/str.html")
+IOError: [Errno 2] No such file or directory: 'html/str.html'
+
+[31/Jul/2015:10:10:28] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:10:10:28] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 52, in index
+    return open("html/str.html")
+IOError: [Errno 2] No such file or directory: 'html/str.html'
+
+[31/Jul/2015:10:10:30] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:10:10:30] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 52, in index
+    return open("html/str.html")
+IOError: [Errno 2] No such file or directory: 'html/str.html'
+
+[31/Jul/2015:10:10:30] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:10:10:30] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 52, in index
+    return open("html/str.html")
+IOError: [Errno 2] No such file or directory: 'html/str.html'
+
+[31/Jul/2015:10:10:31] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:10:10:31] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 52, in index
+    return open("html/str.html")
+IOError: [Errno 2] No such file or directory: 'html/str.html'
+
+[31/Jul/2015:10:11:12] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:10:12:38] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 39, in login
+    if(authUser(username, password)):
+NameError: global name 'authUser' is not defined
+
+[31/Jul/2015:10:16:12] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:10:16:25] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:10:16:33] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:10:17:47]  SESSION 
+[31/Jul/2015:10:17:47] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 49, in index
+    cherrypy.log(cherrypy.session)
+  File "/usr/lib/python2.7/site-packages/cherrypy/__init__.py", line 326, in __call__
+    return log.error(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cplogging.py", line 214, in error
+    self.error_log.log(severity, ' '.join((self.time(), context, msg)))
+TypeError: sequence item 2: expected string, _ThreadLocalProxy found
+
+[31/Jul/2015:10:18:13]  SESSION 
+[31/Jul/2015:10:18:13] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 49, in index
+    cherrypy.log(cherrypy.session.to_s)
+  File "/usr/lib/python2.7/site-packages/cherrypy/__init__.py", line 224, in __getattr__
+    return getattr(child, name)
+AttributeError: 'RamSession' object has no attribute 'to_s'
+
+[31/Jul/2015:10:18:14]  SESSION 
+[31/Jul/2015:10:18:14] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 49, in index
+    cherrypy.log(cherrypy.session.to_s)
+  File "/usr/lib/python2.7/site-packages/cherrypy/__init__.py", line 224, in __getattr__
+    return getattr(child, name)
+AttributeError: 'RamSession' object has no attribute 'to_s'
+
+[31/Jul/2015:10:18:15]  SESSION 
+[31/Jul/2015:10:18:15] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 49, in index
+    cherrypy.log(cherrypy.session.to_s)
+  File "/usr/lib/python2.7/site-packages/cherrypy/__init__.py", line 224, in __getattr__
+    return getattr(child, name)
+AttributeError: 'RamSession' object has no attribute 'to_s'
+
+[31/Jul/2015:10:18:15]  SESSION 
+[31/Jul/2015:10:18:15] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 49, in index
+    cherrypy.log(cherrypy.session.to_s)
+  File "/usr/lib/python2.7/site-packages/cherrypy/__init__.py", line 224, in __getattr__
+    return getattr(child, name)
+AttributeError: 'RamSession' object has no attribute 'to_s'
+
+[31/Jul/2015:10:18:31]  SESSION 
+[31/Jul/2015:10:18:31]  <cherrypy._ThreadLocalProxy object at 0x7fe482520c10>
+[31/Jul/2015:10:21:34]  SESSION 
+[31/Jul/2015:10:21:34] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:10:21:34] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 56, in index
+    self.logSessionParams()
+  File "/var/www/chpy/app.py", line 38, in logSessionParams
+    for param in cherrypy.session:
+  File "/usr/lib/python2.7/site-packages/cherrypy/__init__.py", line 246, in __getitem__
+    return child[key]
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/sessions.py", line 309, in __getitem__
+    return self._data[key]
+KeyError: 0
+
+[31/Jul/2015:10:27:43]  SESSION 
+[31/Jul/2015:10:27:43] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 56, in index
+    self.logSessionParams()
+  File "/var/www/chpy/app.py", line 38, in logSessionParams
+    for param,value in cherrypy.session.iteritems():
+  File "/usr/lib/python2.7/site-packages/cherrypy/__init__.py", line 224, in __getattr__
+    return getattr(child, name)
+AttributeError: 'RamSession' object has no attribute 'iteritems'
+
+[31/Jul/2015:10:30:55] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:10:30:55]  HAS USERNAME2 KEY None
+[31/Jul/2015:10:31:02]  HAS USERNAME KEY bpb
+[31/Jul/2015:10:31:11] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:10:31:11]  HAS USERNAME2 KEY None
+[31/Jul/2015:10:31:11] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:10:31:11]  HAS USERNAME2 KEY None
+[31/Jul/2015:10:31:24] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:10:31:24]  HAS USERNAME2 KEY None
+[31/Jul/2015:10:31:35] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:10:31:35]  HAS USERNAME KEY bpb
+[31/Jul/2015:10:31:44]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:10:31:44]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:10:31:49]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:10:31:53]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:10:32:59]  HAS USERNAME2 KEY None
+[31/Jul/2015:10:33:12]  HAS USERNAME KEY bpb
+[31/Jul/2015:10:33:16]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:10:33:16]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:10:43:39] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:10:43:39]  HAS USERNAME2 KEY None
+[31/Jul/2015:10:43:53] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:10:43:53]  HAS USERNAME KEY bpb
+[31/Jul/2015:10:46:12] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:10:46:12]  HAS USERNAME2 KEY None
+[31/Jul/2015:10:46:13] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:10:46:13]  HAS USERNAME2 KEY None
+[31/Jul/2015:10:46:24] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:10:46:24]  HAS USERNAME KEY bpb
+[31/Jul/2015:10:47:12] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:10:47:12]  HAS USERNAME2 KEY None
+[31/Jul/2015:10:47:13]  HAS USERNAME2 KEY None
+[31/Jul/2015:10:49:21]  HAS USERNAME2 KEY None
+[31/Jul/2015:10:49:28]  HAS USERNAME KEY bpb
+[31/Jul/2015:10:49:55]  HAS USERNAME2 KEY None
+[31/Jul/2015:10:49:55]  HAS USERNAME2 KEY None
+[31/Jul/2015:10:50:03]  HAS USERNAME KEY bpb
+[31/Jul/2015:10:54:27]  HAS USERNAME2 KEY None
+[31/Jul/2015:10:54:27]  HAS USERNAME2 KEY None
+[31/Jul/2015:10:54:33]  HAS USERNAME KEY bpb
+[31/Jul/2015:10:54:33]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:10:54:33] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 55, in index
+    return Template(open(os.path.join(rootpath,"html", "main.html"))).safe_substitute(username = cherrypy.session.get("username"))
+  File "/usr/lib64/python2.7/string.py", line 207, in safe_substitute
+    return self.pattern.sub(convert, self.template)
+TypeError: expected string or buffer
+
+[31/Jul/2015:10:58:02] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:10:58:02]  HAS USERNAME2 KEY None
+[31/Jul/2015:10:58:14] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:10:58:14]  HAS USERNAME KEY bpb
+[31/Jul/2015:10:58:14]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:10:58:24] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:10:58:30] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:12:28:10]  HAS USERNAME2 KEY None
+[31/Jul/2015:12:28:20]  HAS USERNAME KEY bpb
+[31/Jul/2015:12:28:20]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:12:35:06] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:12:35:06]  HAS USERNAME2 KEY None
+[31/Jul/2015:12:35:41] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:12:35:41]  HAS USERNAME2 KEY None
+[31/Jul/2015:12:36:02] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:12:36:02]  HAS USERNAME2 KEY None
+[31/Jul/2015:12:36:08] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:12:36:08]  HAS USERNAME KEY bpb
+[31/Jul/2015:12:36:08]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:12:46:19] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:12:46:19]  HAS USERNAME2 KEY None
+[31/Jul/2015:12:46:26] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:12:46:26]  HAS USERNAME KEY bpb
+[31/Jul/2015:12:46:26]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:12:46:26] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 58, in index
+    return env.get_template('main.html').render(username=cherrypy.session.get("username"))
+  File "/usr/lib/python2.7/site-packages/jinja2/environment.py", line 791, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/usr/lib/python2.7/site-packages/jinja2/environment.py", line 765, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/usr/lib/python2.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/usr/lib/python2.7/site-packages/jinja2/loaders.py", line 178, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: main.html
+
+[31/Jul/2015:12:47:34]  HAS USERNAME2 KEY None
+[31/Jul/2015:12:47:44]  HAS USERNAME KEY bpb
+[31/Jul/2015:12:47:44]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:13:07:42] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:13:07:42]  HAS USERNAME2 KEY None
+[31/Jul/2015:13:07:49] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:13:07:49]  HAS USERNAME KEY bpb
+[31/Jul/2015:13:07:49]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:13:07:49] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 58, in index
+    from mail_config_paths import FORWARD_FILE, FORWARD_PROCMAIL_FILE, FORWARD_MSG_FILE
+ImportError: No module named mail_config_paths
+
+[31/Jul/2015:13:09:58]  HAS USERNAME2 KEY None
+[31/Jul/2015:13:10:05]  HAS USERNAME KEY bpb
+[31/Jul/2015:13:10:05]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:13:13:48] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:13:13:48]  HAS USERNAME2 KEY None
+[31/Jul/2015:13:14:00] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:13:14:00]  HAS USERNAME KEY bpb
+[31/Jul/2015:13:14:00]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:13:29:58] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:13:29:58]  HAS USERNAME2 KEY None
+[31/Jul/2015:13:30:05] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:13:30:05]  HAS USERNAME KEY bpb
+[31/Jul/2015:13:30:05]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:13:30:12] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:13:32:07] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:13:32:07]  HAS USERNAME2 KEY None
+[31/Jul/2015:13:32:14] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:13:32:14]  HAS USERNAME KEY bpb
+[31/Jul/2015:13:32:14]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:13:32:17] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 83, in generate
+    ffilename = Template(FORWARD_FILE).safe_substitute(username = username)
+NameError: global name 'FORWARD_FILE' is not defined
+
+[31/Jul/2015:13:32:48] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:13:32:48]  HAS USERNAME2 KEY None
+[31/Jul/2015:13:32:49] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:13:32:49]  HAS USERNAME2 KEY None
+[31/Jul/2015:13:32:57] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:13:32:57]  HAS USERNAME KEY bpb
+[31/Jul/2015:13:32:57]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:13:33:01] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 90, in generate
+    pmfile = open(procfilename, "w")
+NameError: global name 'procfilename' is not defined
+
+[31/Jul/2015:13:33:25] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:13:33:26]  HAS USERNAME2 KEY None
+[31/Jul/2015:13:33:26]  HAS USERNAME2 KEY None
+[31/Jul/2015:13:33:33] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:13:33:33]  HAS USERNAME KEY bpb
+[31/Jul/2015:13:33:33]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:13:33:36]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:13:39:25] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:13:39:25]  HAS USERNAME2 KEY None
+[31/Jul/2015:13:39:31] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:13:39:31]  HAS USERNAME KEY bpb
+[31/Jul/2015:13:39:31]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:13:40:13] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:13:40:13]  HAS USERNAME2 KEY None
+[31/Jul/2015:13:40:21] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:13:40:21]  HAS USERNAME KEY bpb
+[31/Jul/2015:13:40:21]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:13:40:54] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:13:40:54]  HAS USERNAME2 KEY None
+[31/Jul/2015:13:41:00] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:13:41:00]  HAS USERNAME2 KEY None
+[31/Jul/2015:13:41:08] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:13:41:08]  HAS USERNAME KEY bpb
+[31/Jul/2015:13:41:08]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:13:41:14]  HAS USERNAME2 KEY None
+[31/Jul/2015:13:41:44] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:13:41:44]  HAS USERNAME KEY bpb
+[31/Jul/2015:13:41:44]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:13:41:48]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:13:41:59]  HAS USERNAME2 KEY None
+[31/Jul/2015:15:04:50]  Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 104, in run
+    hook()
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 63, in __call__
+    return self.callback(**self.kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cptools.py", line 286, in _lock_session
+    cherrypy.serving.session.acquire_lock()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/sessions.py", line 539, in acquire_lock
+    self.lock = lockfile.LockFile(path)
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/lockfile.py", line 75, in __init__
+    self.fp = open(path, 'a+')
+IOError: [Errno 2] No such file or directory: u'/var/www/chpy/sessions/session-ebdacc2270ea237769c077aff946f39298656c2a.lock'
+
+[31/Jul/2015:15:04:50] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 667, in respond
+    self.hooks.run('before_handler')
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 114, in run
+    raise exc
+IOError: [Errno 2] No such file or directory: u'/var/www/chpy/sessions/session-ebdacc2270ea237769c077aff946f39298656c2a.lock'
+
+[31/Jul/2015:15:05:16]  Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 104, in run
+    hook()
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 63, in __call__
+    return self.callback(**self.kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cptools.py", line 286, in _lock_session
+    cherrypy.serving.session.acquire_lock()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/sessions.py", line 539, in acquire_lock
+    self.lock = lockfile.LockFile(path)
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/lockfile.py", line 75, in __init__
+    self.fp = open(path, 'a+')
+IOError: [Errno 13] Permission denied: u'/var/www/chpy/sessions/session-3cf66fc65539ca4219167a4b065ff30982850310.lock'
+
+[31/Jul/2015:15:05:16] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 667, in respond
+    self.hooks.run('before_handler')
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 114, in run
+    raise exc
+IOError: [Errno 13] Permission denied: u'/var/www/chpy/sessions/session-3cf66fc65539ca4219167a4b065ff30982850310.lock'
+
+[31/Jul/2015:15:05:53] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:15:05:53]  HAS USERNAME2 KEY None
+[31/Jul/2015:15:12:49] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:15:12:49]  HAS USERNAME KEY bpb
+[31/Jul/2015:15:12:49]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:15:12:59] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:15:12:59]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:15:13:14] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:15:13:14]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:15:13:23] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:15:13:23]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:15:13:33] ENGINE Started monitor thread 'Session cleanup'.
+[31/Jul/2015:15:13:33]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:15:13:46]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:15:13:51]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:15:17:03]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:15:19:16]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:15:20:01]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:15:20:39]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:15:20:48]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:15:21:01]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:15:21:21]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:15:21:29]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:15:22:55]  HAS USERNAME2 KEY bpb
+[31/Jul/2015:15:23:00]  HAS USERNAME2 KEY None
