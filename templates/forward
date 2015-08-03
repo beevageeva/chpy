@@ -1,1 +1,0 @@
-"|IFS=' ' && exec /usr/bin/procmail {{procfilepath}} || exit 75 #{{username}}"

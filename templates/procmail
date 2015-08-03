@@ -1,6 +1,6 @@
-MAILDIR=$HOME/Maildir
+MAILDIR={{mailDir}}
 ORGMAIL=$MAILDIR
-SENDMAIL=/usr/sbin/sendmail
+SENDMAIL={{sendmailPath}}
 :0
 * ^TO_{{username}}@cca.iac.es
 * !^FROM_DAEMON

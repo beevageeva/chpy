@@ -935,3 +935,401 @@ NameError: global name 'fmfilename' is not defined
 [31/Jul/2015:16:09:53]  got env var appcontext
 [31/Jul/2015:16:09:53]  APPCONTEXT has value chpy
 [31/Jul/2015:16:09:53]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:08:25:19]  got env var appcontext
+[03/Aug/2015:08:25:19]  APPCONTEXT has value chpy
+[03/Aug/2015:08:25:19] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:08:25:19]  HAS USERNAME2 KEY None
+[03/Aug/2015:08:25:47]  got env var appcontext
+[03/Aug/2015:08:25:47]  APPCONTEXT has value chpy
+[03/Aug/2015:08:25:47] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:08:25:47]  HAS USERNAME KEY bpb
+[03/Aug/2015:08:25:47]  got env var appcontext
+[03/Aug/2015:08:25:47]  APPCONTEXT has value chpy
+[03/Aug/2015:08:25:47]  got env var appcontext
+[03/Aug/2015:08:25:47]  APPCONTEXT has value chpy
+[03/Aug/2015:08:25:47]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:08:49:32]  got env var appcontext
+[03/Aug/2015:08:49:32]  APPCONTEXT has value chpy
+[03/Aug/2015:08:49:32] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:08:49:32]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:08:49:32] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 62, in index
+    res = getFiles()
+  File "/var/www/chpy/procmail_handler.py", line 4, in getFiles
+    ffile = Template(FORWARD_FILE).safe_substitute(username = username)
+NameError: global name 'username' is not defined
+
+[03/Aug/2015:08:51:11]  got env var appcontext
+[03/Aug/2015:08:51:11]  APPCONTEXT has value chpy
+[03/Aug/2015:08:51:11] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:08:51:11]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:08:51:11] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 62, in index
+    res = getFiles(username)
+  File "/var/www/chpy/procmail_handler.py", line 10, in getFiles
+    if 	os.path.isfile(ffile):
+NameError: global name 'os' is not defined
+
+[03/Aug/2015:08:51:34]  got env var appcontext
+[03/Aug/2015:08:51:34]  APPCONTEXT has value chpy
+[03/Aug/2015:08:51:34] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:08:51:34]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:08:51:34] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 63, in index
+    return env.get_template('mainProcmail.html').render(username=username,forward=forward,procmail=procmail,msg=msg)
+NameError: global name 'forward' is not defined
+
+[03/Aug/2015:08:52:24]  got env var appcontext
+[03/Aug/2015:08:52:24]  APPCONTEXT has value chpy
+[03/Aug/2015:08:52:24] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:08:52:24]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:08:52:28]  got env var appcontext
+[03/Aug/2015:08:52:28]  APPCONTEXT has value chpy
+[03/Aug/2015:08:52:28]  got env var appcontext
+[03/Aug/2015:08:52:28]  APPCONTEXT has value chpy
+[03/Aug/2015:08:52:28]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:08:52:31]  got env var appcontext
+[03/Aug/2015:08:52:31]  APPCONTEXT has value chpy
+[03/Aug/2015:08:52:31] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 73, in generate
+    generateFiles(username)
+  File "/var/www/chpy/procmail_handler.py", line 31, in generateFiles
+    ffile.write(env.get_template('forward').render(username=username, procfilepath=pmfilename))
+NameError: global name 'env' is not defined
+
+[03/Aug/2015:08:54:57]  got env var appcontext
+[03/Aug/2015:08:54:57]  APPCONTEXT has value chpy
+[03/Aug/2015:08:54:57] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:08:54:57]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:08:54:57]  got env var appcontext
+[03/Aug/2015:08:54:57]  APPCONTEXT has value chpy
+[03/Aug/2015:08:54:57] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:08:54:57]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:08:55:00]  got env var appcontext
+[03/Aug/2015:08:55:00]  APPCONTEXT has value chpy
+[03/Aug/2015:08:55:00] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 73, in generate
+    generateFiles(username, env.get_template('forward'), env.get_template('procmail'))
+  File "/var/www/chpy/procmail_handler.py", line 37, in generateFiles
+    msgfile.write(msg)
+NameError: global name 'msg' is not defined
+
+[03/Aug/2015:08:56:00]  got env var appcontext
+[03/Aug/2015:08:56:00]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:00] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:08:56:00]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:08:56:00]  got env var appcontext
+[03/Aug/2015:08:56:00]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:00] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:08:56:00]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:08:56:08]  got env var appcontext
+[03/Aug/2015:08:56:08]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:08] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:08:56:08]  got env var appcontext
+[03/Aug/2015:08:56:08]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:08]  got env var appcontext
+[03/Aug/2015:08:56:08]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:08]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:08:56:10]  got env var appcontext
+[03/Aug/2015:08:56:10]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:10]  got env var appcontext
+[03/Aug/2015:08:56:10]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:10]  got env var appcontext
+[03/Aug/2015:08:56:10]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:10]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:08:56:17]  got env var appcontext
+[03/Aug/2015:08:56:17]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:17] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:08:56:17]  got env var appcontext
+[03/Aug/2015:08:56:17]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:17]  got env var appcontext
+[03/Aug/2015:08:56:17]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:17]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:08:56:22]  got env var appcontext
+[03/Aug/2015:08:56:22]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:22]  got env var appcontext
+[03/Aug/2015:08:56:22]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:22]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:08:56:27]  got env var appcontext
+[03/Aug/2015:08:56:27]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:27]  got env var appcontext
+[03/Aug/2015:08:56:27]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:27]  got env var appcontext
+[03/Aug/2015:08:56:27]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:27]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:08:56:32]  got env var appcontext
+[03/Aug/2015:08:56:32]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:32]  got env var appcontext
+[03/Aug/2015:08:56:32]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:32]  got env var appcontext
+[03/Aug/2015:08:56:32]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:32]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:08:56:33]  got env var appcontext
+[03/Aug/2015:08:56:33]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:33]  got env var appcontext
+[03/Aug/2015:08:56:33]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:33]  got env var appcontext
+[03/Aug/2015:08:56:33]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:33]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:08:56:34]  got env var appcontext
+[03/Aug/2015:08:56:34]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:34]  got env var appcontext
+[03/Aug/2015:08:56:34]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:34]  got env var appcontext
+[03/Aug/2015:08:56:34]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:34]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:08:56:39]  got env var appcontext
+[03/Aug/2015:08:56:39]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:39] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:08:56:39]  got env var appcontext
+[03/Aug/2015:08:56:39]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:39]  got env var appcontext
+[03/Aug/2015:08:56:39]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:39]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:08:56:40]  got env var appcontext
+[03/Aug/2015:08:56:40]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:40]  got env var appcontext
+[03/Aug/2015:08:56:40]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:40]  got env var appcontext
+[03/Aug/2015:08:56:40]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:40]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:08:56:51]  got env var appcontext
+[03/Aug/2015:08:56:51]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:51]  got env var appcontext
+[03/Aug/2015:08:56:51]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:51]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:08:56:57]  got env var appcontext
+[03/Aug/2015:08:56:57]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:57] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:08:56:57]  got env var appcontext
+[03/Aug/2015:08:56:57]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:57]  got env var appcontext
+[03/Aug/2015:08:56:57]  APPCONTEXT has value chpy
+[03/Aug/2015:08:56:57]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:11:59]  got env var appcontext
+[03/Aug/2015:09:11:59]  APPCONTEXT has value chpy
+[03/Aug/2015:09:11:59] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:09:11:59]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:12:06]  got env var appcontext
+[03/Aug/2015:09:12:06]  APPCONTEXT has value chpy
+[03/Aug/2015:09:12:06] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:09:12:06]  got env var appcontext
+[03/Aug/2015:09:12:06]  APPCONTEXT has value chpy
+[03/Aug/2015:09:12:06]  got env var appcontext
+[03/Aug/2015:09:12:06]  APPCONTEXT has value chpy
+[03/Aug/2015:09:12:06]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:12:09]  got env var appcontext
+[03/Aug/2015:09:12:09]  APPCONTEXT has value chpy
+[03/Aug/2015:09:12:09]  got env var appcontext
+[03/Aug/2015:09:12:09]  APPCONTEXT has value chpy
+[03/Aug/2015:09:12:09]  got env var appcontext
+[03/Aug/2015:09:12:09]  APPCONTEXT has value chpy
+[03/Aug/2015:09:12:09]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:22:08]  got env var appcontext
+[03/Aug/2015:09:22:08]  APPCONTEXT has value chpy
+[03/Aug/2015:09:22:08] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:09:22:08]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:22:11]  got env var appcontext
+[03/Aug/2015:09:22:11]  APPCONTEXT has value chpy
+[03/Aug/2015:09:22:11]  got env var appcontext
+[03/Aug/2015:09:22:11]  APPCONTEXT has value chpy
+[03/Aug/2015:09:22:11]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:22:13]  got env var appcontext
+[03/Aug/2015:09:22:13]  APPCONTEXT has value chpy
+[03/Aug/2015:09:22:13]  got env var appcontext
+[03/Aug/2015:09:22:13]  APPCONTEXT has value chpy
+[03/Aug/2015:09:22:13]  got env var appcontext
+[03/Aug/2015:09:22:13]  APPCONTEXT has value chpy
+[03/Aug/2015:09:22:13]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:22:16]  got env var appcontext
+[03/Aug/2015:09:22:16]  APPCONTEXT has value chpy
+[03/Aug/2015:09:22:16]  got env var appcontext
+[03/Aug/2015:09:22:16]  APPCONTEXT has value chpy
+[03/Aug/2015:09:22:16]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:22:19]  got env var appcontext
+[03/Aug/2015:09:22:19]  APPCONTEXT has value chpy
+[03/Aug/2015:09:22:19]  got env var appcontext
+[03/Aug/2015:09:22:19]  APPCONTEXT has value chpy
+[03/Aug/2015:09:22:19]  got env var appcontext
+[03/Aug/2015:09:22:19]  APPCONTEXT has value chpy
+[03/Aug/2015:09:22:19]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:22:45]  got env var appcontext
+[03/Aug/2015:09:22:45]  APPCONTEXT has value chpy
+[03/Aug/2015:09:22:45] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:09:22:45]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:22:51]  got env var appcontext
+[03/Aug/2015:09:22:51]  APPCONTEXT has value chpy
+[03/Aug/2015:09:22:51] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:09:22:51]  HAS USERNAME KEY bpb
+[03/Aug/2015:09:22:52]  got env var appcontext
+[03/Aug/2015:09:22:52]  APPCONTEXT has value chpy
+[03/Aug/2015:09:22:52]  got env var appcontext
+[03/Aug/2015:09:22:52]  APPCONTEXT has value chpy
+[03/Aug/2015:09:22:52]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:27:42]  got env var appcontext
+[03/Aug/2015:09:27:42]  APPCONTEXT has value chpy
+[03/Aug/2015:09:27:42] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:09:27:42]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:27:50]  got env var appcontext
+[03/Aug/2015:09:27:50]  APPCONTEXT has value chpy
+[03/Aug/2015:09:27:50] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:09:27:50] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 80, in generate
+    generateFiles(username, msg, env.get_template('forwardVacation'))
+TypeError: generateFiles() takes exactly 4 arguments (3 given)
+
+[03/Aug/2015:09:29:16]  got env var appcontext
+[03/Aug/2015:09:29:16]  APPCONTEXT has value chpy
+[03/Aug/2015:09:29:16] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:09:29:16]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:29:16]  got env var appcontext
+[03/Aug/2015:09:29:16]  APPCONTEXT has value chpy
+[03/Aug/2015:09:29:16] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:09:29:16]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:29:22]  got env var appcontext
+[03/Aug/2015:09:29:22]  APPCONTEXT has value chpy
+[03/Aug/2015:09:29:22] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:09:29:22] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 80, in generate
+    generateFiles(username, msg, env.get_template('forwardVacation'))
+  File "/var/www/chpy/vacation_handler.py", line 27, in generateFiles
+    msgfile= open(msgfilename, "w")
+IOError: [Errno 2] No such file or directory: u'/home/bpb/.vacation.msg'
+
+[03/Aug/2015:09:30:15]  got env var appcontext
+[03/Aug/2015:09:30:15]  APPCONTEXT has value chpy
+[03/Aug/2015:09:30:15] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:09:30:15]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:30:16]  got env var appcontext
+[03/Aug/2015:09:30:16]  APPCONTEXT has value chpy
+[03/Aug/2015:09:30:16] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:09:30:16]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:30:22]  got env var appcontext
+[03/Aug/2015:09:30:22]  APPCONTEXT has value chpy
+[03/Aug/2015:09:30:22] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:09:30:22] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 80, in generate
+    generateFiles(username, msg, env.get_template('forwardVacation'))
+  File "/var/www/chpy/vacation_handler.py", line 27, in generateFiles
+    msgfile= open(msgfilename, "w")
+IOError: [Errno 13] Permission denied: u'/home/bpb/.vacation.msg'
+
+[03/Aug/2015:09:30:28]  got env var appcontext
+[03/Aug/2015:09:30:28]  APPCONTEXT has value chpy
+[03/Aug/2015:09:30:28]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:30:32]  got env var appcontext
+[03/Aug/2015:09:30:32]  APPCONTEXT has value chpy
+[03/Aug/2015:09:30:32]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:30:37]  got env var appcontext
+[03/Aug/2015:09:30:37]  APPCONTEXT has value chpy
+[03/Aug/2015:09:30:37]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:30:40]  got env var appcontext
+[03/Aug/2015:09:30:40]  APPCONTEXT has value chpy
+[03/Aug/2015:09:30:40] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 80, in generate
+    generateFiles(username, msg, env.get_template('forwardVacation'))
+  File "/var/www/chpy/vacation_handler.py", line 27, in generateFiles
+    msgfile= open(msgfilename, "w")
+IOError: [Errno 13] Permission denied: u'/home/bpb/.vacation.msg'
+
+[03/Aug/2015:09:31:25]  got env var appcontext
+[03/Aug/2015:09:31:25]  APPCONTEXT has value chpy
+[03/Aug/2015:09:31:25]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:31:32]  got env var appcontext
+[03/Aug/2015:09:31:32]  APPCONTEXT has value chpy
+[03/Aug/2015:09:31:32]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:31:58]  got env var appcontext
+[03/Aug/2015:09:31:58]  APPCONTEXT has value chpy
+[03/Aug/2015:09:31:58]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:32:01]  got env var appcontext
+[03/Aug/2015:09:32:01]  APPCONTEXT has value chpy
+[03/Aug/2015:09:32:01] HTTP Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/usr/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 217, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/usr/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 61, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "/var/www/chpy/app.py", line 80, in generate
+    generateFiles(username, msg, env.get_template('forwardVacation'))
+  File "/var/www/chpy/vacation_handler.py", line 27, in generateFiles
+    msgfile= open(msgfilename, "w")
+IOError: [Errno 13] Permission denied: u'/home/bpb/.vacation.msg'
+
+[03/Aug/2015:09:34:49]  got env var appcontext
+[03/Aug/2015:09:34:49]  APPCONTEXT has value chpy
+[03/Aug/2015:09:34:49]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:34:52]  got env var appcontext
+[03/Aug/2015:09:34:52]  APPCONTEXT has value chpy
+[03/Aug/2015:09:34:52]  got env var appcontext
+[03/Aug/2015:09:34:52]  APPCONTEXT has value chpy
+[03/Aug/2015:09:34:52]  got env var appcontext
+[03/Aug/2015:09:34:52]  APPCONTEXT has value chpy
+[03/Aug/2015:09:34:52]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:34:59]  got env var appcontext
+[03/Aug/2015:09:34:59]  APPCONTEXT has value chpy
+[03/Aug/2015:09:34:59]  got env var appcontext
+[03/Aug/2015:09:34:59]  APPCONTEXT has value chpy
+[03/Aug/2015:09:34:59]  HAS USERNAME2 KEY None
+[03/Aug/2015:09:35:06]  got env var appcontext
+[03/Aug/2015:09:35:06]  APPCONTEXT has value chpy
+[03/Aug/2015:09:35:06]  HAS USERNAME KEY bpb
+[03/Aug/2015:09:35:06]  got env var appcontext
+[03/Aug/2015:09:35:06]  APPCONTEXT has value chpy
+[03/Aug/2015:09:35:06]  got env var appcontext
+[03/Aug/2015:09:35:06]  APPCONTEXT has value chpy
+[03/Aug/2015:09:35:06]  HAS USERNAME2 KEY bpb

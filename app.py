@@ -56,60 +56,41 @@ class Root(object):
 		cherrypy.log("HAS USERNAME2 KEY %s" % str(cherrypy.session.get("username")))
 		if cherrypy.session.get("username"):
 			username = cherrypy.session.get("username")
-			from mail_config_paths import FORWARD_FILE, FORWARD_PROCMAIL_FILE, FORWARD_MSG_FILE
-			from string import Template
-			ffile = Template(FORWARD_FILE).safe_substitute(username = username)	
-			pmfile = Template(FORWARD_PROCMAIL_FILE).safe_substitute(username = username)	
-			msgfile = Template(FORWARD_MSG_FILE).safe_substitute(username = username)	
-			forward = None
-			procmail = None
-			msg = None	
-			if 	os.path.isfile(ffile):
-				forward = open(ffile).read()
-			if 	os.path.isfile(pmfile):
-				procmail = open(pmfile).read()
-			if 	os.path.isfile(msgfile):
-				msg = open(msgfile).read()
-			return env.get_template('main.html').render(username=username,forward=forward,procmail=procmail,msg=msg)
-		else:
-			return open(os.path.join(rootpath,"html", "login.html"))
+			from app_config import autoresponse_type
+			if(autoresponse_type == "procmail"):
+				from procmail_handler import getFiles
+				res = getFiles(username)
+				return env.get_template('mainProcmail.html').render(username=username,forward=res["forward"],procmail=res["procmail"],msg=res["msg"])
+			elif(autoresponse_type == "vacation"):
+				from vacation_handler import getFiles
+				res = getFiles(username)
+				return env.get_template('mainVacation.html').render(username=username,forward=res["forward"],msg=res["msg"])
+		return open(os.path.join(rootpath,"html", "login.html"))
 
 	@cherrypy.expose
 	def generate(self, msg="I am on vacation"):
 		if cherrypy.session.get("username"):
 			username = cherrypy.session.get("username")
-			from mail_config_paths import FORWARD_FILE, FORWARD_PROCMAIL_FILE, FORWARD_MSG_FILE
-			from string import Template
-			ffilename = Template(FORWARD_FILE).safe_substitute(username = username)	
-			pmfilename = Template(FORWARD_PROCMAIL_FILE).safe_substitute(username = username)	
-			msgfilename = Template(FORWARD_MSG_FILE).safe_substitute(username = username)	
-			ffile = open(ffilename, "w")
-			#TODO replace program binary path in templates
-			ffile.write(env.get_template('forward').render(username=username, procfilepath=pmfilename))
-			ffile.close()
-			pmfile = open(pmfilename, "w")
-			pmfile.write(env.get_template('procmail').render(username=username, msgfilepath=msgfilename))
-			pmfile.close()
-			msgfile= open(msgfilename, "w")
-			msgfile.write(msg)
-			msgfile.close()
+			from app_config import autoresponse_type
+			if(autoresponse_type == "procmail"):
+				from procmail_handler import generateFiles
+				generateFiles(username, msg, env.get_template('forwardProcmail'), env.get_template('procmail'))
+			elif(autoresponse_type == "vacation"):
+				from vacation_handler import generateFiles
+				generateFiles(username, msg, env.get_template('forwardVacation'))
 		raise cherrypy.HTTPRedirect("/%s" % appcontext)
 
 	@cherrypy.expose
 	def delete(self,action):
 		if cherrypy.session.get("username"):
 			username = cherrypy.session.get("username")
-			from mail_config_paths import FORWARD_FILE, FORWARD_PROCMAIL_FILE, FORWARD_MSG_FILE
-			from string import Template
-			ffilename = Template(FORWARD_FILE).safe_substitute(username = username)	
-			pmfilename = Template(FORWARD_PROCMAIL_FILE).safe_substitute(username = username)	
-			msgfilename = Template(FORWARD_MSG_FILE).safe_substitute(username = username)	
-			if(os.path.isfile(ffilename)):
-				os.remove(ffilename)
-			if(os.path.isfile(pmfilename)):
-				os.remove(pmfilename)
-			if(action=="del" and os.path.isfile(msgfilename)):
-				os.remove(msgfilename)
+			from app_config import autoresponse_type
+			if(autoresponse_type == "procmail"):
+				from procmail_handler import deleteFiles
+				deleteFiles(username, action=="keep")
+			elif(autoresponse_type == "vacation"):
+				from vacation_handler import deleteFiles
+				deleteFiles(username, action=="keep")
 		raise cherrypy.HTTPRedirect("/%s" % appcontext)
 
 
@@ -126,6 +107,7 @@ routesConf = {
         'tools.sessions.timeout': 600 
 		    #'tools.staticdir.root': os.path.abspath(os.getcwd())
 		},
+##static dir configured in apache
 #		'/static': {
 #		    'tools.staticdir.on': True,
 #		    'tools.staticdir.dir': './public'
