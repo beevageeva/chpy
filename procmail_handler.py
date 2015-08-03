@@ -21,7 +21,7 @@ def getFiles(username):
 
 
 def generateFiles(username, msg, forwardTemplate, procmailTemplate):
-	from procmail_config_paths import FORWARD_FILE, FORWARD_PROCMAIL_FILE, FORWARD_MSG_FILE, PROCMAIL_PATH, SENDMAIL_PATH, MAIL_DIR
+	from procmail_config_paths import FORWARD_FILE, FORWARD_PROCMAIL_FILE, FORWARD_MSG_FILE, PROCMAIL_PATH, SENDMAIL_PATH, MAIL_DIR, NEW_MAIL_FOLDER, DOMAIN_NAME
 	from string import Template
 	ffilename = Template(FORWARD_FILE).safe_substitute(username = username)	
 	pmfilename = Template(FORWARD_PROCMAIL_FILE).safe_substitute(username = username)	
@@ -30,7 +30,7 @@ def generateFiles(username, msg, forwardTemplate, procmailTemplate):
 	ffile.write(forwardTemplate.render(username=username, procfilepath=pmfilename, procmailPath=PROCMAIL_PATH ))
 	ffile.close()
 	pmfile = open(pmfilename, "w")
-	pmfile.write(procmailTemplate.render(username=username, msgfilepath=msgfilename, sendmailPath=SENDMAIL_PATH, mailDir=MAIL_DIR ))
+	pmfile.write(procmailTemplate.render(username=username, msgfilepath=msgfilename, sendmailPath=SENDMAIL_PATH, mailDir=MAIL_DIR, newMailFolder = NEW_MAIL_FOLDER, domainname=DOMAIN_NAME ))
 	pmfile.close()
 	msgfile= open(msgfilename, "w")
 	msgfile.write(msg)

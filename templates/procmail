@@ -2,13 +2,13 @@ MAILDIR={{mailDir}}
 ORGMAIL=$MAILDIR
 SENDMAIL={{sendmailPath}}
 :0
-* ^TO_{{username}}@cca.iac.es
+* ^TO_{{username}}@{{domainname}}
 * !^FROM_DAEMON
   {
    :0 h c
-     | (formail -t -r -A"X-Loop: noreply@cca.iac.es " ; \
-      cat {{msgfilepath}} ) | $SENDMAIL -t -f {{username}}@cca.iac.es
+     | (formail -t -r -A"X-Loop: {{username}}@{{domainname}} " ; \
+      cat {{msgfilepath}} ) | $SENDMAIL -t -f {{username}}@{{domainname}}
     :0
-     new
+     {{newMailFolder}}
   }
 

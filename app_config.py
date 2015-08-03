@@ -1,2 +1,2 @@
-#autoresponse_type = "procmail"
-autoresponse_type = "vacation"
+autoresponse_type = "procmail"
+#autoresponse_type = "vacation"
