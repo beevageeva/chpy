@@ -52,19 +52,25 @@ class Root(object):
 	
 
 	@cherrypy.expose
-	def index(self):
+	def index(self, message=None):
 		cherrypy.log("HAS USERNAME2 KEY %s" % str(cherrypy.session.get("username")))
 		if cherrypy.session.get("username"):
+			if(message=="generated"):
+				message = "Files generated"
 			username = cherrypy.session.get("username")
 			from app_config import autoresponse_type
 			if(autoresponse_type == "procmail"):
 				from procmail_handler import getFiles
 				res = getFiles(username)
-				return env.get_template('mainProcmail.html').render(username=username,forward=res["forward"],procmail=res["procmail"],msg=res["msg"])
+				if(message is None):
+					message = "For procmail autoresponse type there must be a forward file with a pipe to procmail program, a procmail file and a message file whose content is displayed in the message text area"
+				return env.get_template('mainProcmail.html').render(username=username,forward=res["forward"],procmail=res["procmail"],msg=res["msg"], message=message)
 			elif(autoresponse_type == "vacation"):
 				from vacation_handler import getFiles
 				res = getFiles(username)
-				return env.get_template('mainVacation.html').render(username=username,forward=res["forward"],msg=res["msg"])
+				if(message is None):
+					message = "For vacation autoresponse type there must be a forward file with a pipe to vacation program and a message file whose content is displayed in the message text area"
+				return env.get_template('mainVacation.html').render(username=username,forward=res["forward"],msg=res["msg"], message=message)
 		return open(os.path.join(rootpath,"html", "login.html"))
 
 	@cherrypy.expose
@@ -78,7 +84,7 @@ class Root(object):
 			elif(autoresponse_type == "vacation"):
 				from vacation_handler import generateFiles
 				generateFiles(username, msg, env.get_template('forwardVacation'))
-		raise cherrypy.HTTPRedirect("/%s" % appcontext)
+		raise cherrypy.HTTPRedirect("/%s?message=generated" % appcontext)
 
 	@cherrypy.expose
 	def delete(self,action):

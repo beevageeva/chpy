@@ -1333,3 +1333,137 @@ IOError: [Errno 13] Permission denied: u'/home/bpb/.vacation.msg'
 [03/Aug/2015:09:35:06]  got env var appcontext
 [03/Aug/2015:09:35:06]  APPCONTEXT has value chpy
 [03/Aug/2015:09:35:06]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:49:38]  got env var appcontext
+[03/Aug/2015:09:49:38]  APPCONTEXT has value chpy
+[03/Aug/2015:09:49:38] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:09:49:38]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:49:56]  got env var appcontext
+[03/Aug/2015:09:49:56]  APPCONTEXT has value chpy
+[03/Aug/2015:09:49:56] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:09:49:56]  got env var appcontext
+[03/Aug/2015:09:49:56]  APPCONTEXT has value chpy
+[03/Aug/2015:09:49:56]  got env var appcontext
+[03/Aug/2015:09:49:56]  APPCONTEXT has value chpy
+[03/Aug/2015:09:49:56]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:50:01]  got env var appcontext
+[03/Aug/2015:09:50:01]  APPCONTEXT has value chpy
+[03/Aug/2015:09:50:01]  got env var appcontext
+[03/Aug/2015:09:50:01]  APPCONTEXT has value chpy
+[03/Aug/2015:09:50:01]  got env var appcontext
+[03/Aug/2015:09:50:01]  APPCONTEXT has value chpy
+[03/Aug/2015:09:50:01]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:50:06]  got env var appcontext
+[03/Aug/2015:09:50:06]  APPCONTEXT has value chpy
+[03/Aug/2015:09:50:06]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:51:15]  got env var appcontext
+[03/Aug/2015:09:51:15]  APPCONTEXT has value chpy
+[03/Aug/2015:09:51:15] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:09:51:15]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:51:53]  got env var appcontext
+[03/Aug/2015:09:51:53]  APPCONTEXT has value chpy
+[03/Aug/2015:09:51:53] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:09:51:53]  got env var appcontext
+[03/Aug/2015:09:51:53]  APPCONTEXT has value chpy
+[03/Aug/2015:09:51:53]  got env var appcontext
+[03/Aug/2015:09:51:53]  APPCONTEXT has value chpy
+[03/Aug/2015:09:51:53]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:52:00]  got env var appcontext
+[03/Aug/2015:09:52:00]  APPCONTEXT has value chpy
+[03/Aug/2015:09:52:00] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:09:52:00]  got env var appcontext
+[03/Aug/2015:09:52:00]  APPCONTEXT has value chpy
+[03/Aug/2015:09:52:00]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:52:06]  got env var appcontext
+[03/Aug/2015:09:52:06]  APPCONTEXT has value chpy
+[03/Aug/2015:09:52:06] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:09:52:06]  got env var appcontext
+[03/Aug/2015:09:52:06]  APPCONTEXT has value chpy
+[03/Aug/2015:09:52:06]  got env var appcontext
+[03/Aug/2015:09:52:06]  APPCONTEXT has value chpy
+[03/Aug/2015:09:52:06]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:52:09]  got env var appcontext
+[03/Aug/2015:09:52:09]  APPCONTEXT has value chpy
+[03/Aug/2015:09:52:09]  got env var appcontext
+[03/Aug/2015:09:52:09]  APPCONTEXT has value chpy
+[03/Aug/2015:09:52:09]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:52:41]  got env var appcontext
+[03/Aug/2015:09:52:41]  APPCONTEXT has value chpy
+[03/Aug/2015:09:52:41]  got env var appcontext
+[03/Aug/2015:09:52:41]  APPCONTEXT has value chpy
+[03/Aug/2015:09:52:41]  HAS USERNAME2 KEY None
+[03/Aug/2015:09:52:45]  got env var appcontext
+[03/Aug/2015:09:52:45]  APPCONTEXT has value chpy
+[03/Aug/2015:09:52:45]  HAS USERNAME KEY bpb
+[03/Aug/2015:09:52:45]  got env var appcontext
+[03/Aug/2015:09:52:45]  APPCONTEXT has value chpy
+[03/Aug/2015:09:52:45]  got env var appcontext
+[03/Aug/2015:09:52:45]  APPCONTEXT has value chpy
+[03/Aug/2015:09:52:45]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:09:52:50]  got env var appcontext
+[03/Aug/2015:09:52:50]  APPCONTEXT has value chpy
+[03/Aug/2015:09:52:50]  got env var appcontext
+[03/Aug/2015:09:52:50]  APPCONTEXT has value chpy
+[03/Aug/2015:09:52:50]  got env var appcontext
+[03/Aug/2015:09:52:50]  APPCONTEXT has value chpy
+[03/Aug/2015:09:52:50]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:10:02:10]  got env var appcontext
+[03/Aug/2015:10:02:10]  APPCONTEXT has value chpy
+[03/Aug/2015:10:02:10] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:10:02:10]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:10:02:10]  got env var appcontext
+[03/Aug/2015:10:02:10]  APPCONTEXT has value chpy
+[03/Aug/2015:10:02:10] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:10:02:10]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:10:02:17]  got env var appcontext
+[03/Aug/2015:10:02:17]  APPCONTEXT has value chpy
+[03/Aug/2015:10:02:17] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:10:02:17]  got env var appcontext
+[03/Aug/2015:10:02:17]  APPCONTEXT has value chpy
+[03/Aug/2015:10:02:17]  got env var appcontext
+[03/Aug/2015:10:02:17]  APPCONTEXT has value chpy
+[03/Aug/2015:10:02:17]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:10:02:33]  got env var appcontext
+[03/Aug/2015:10:02:33]  APPCONTEXT has value chpy
+[03/Aug/2015:10:02:33] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:10:02:33]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:10:02:33]  got env var appcontext
+[03/Aug/2015:10:02:33]  APPCONTEXT has value chpy
+[03/Aug/2015:10:02:33] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:10:02:33]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:10:03:55]  got env var appcontext
+[03/Aug/2015:10:03:55]  APPCONTEXT has value chpy
+[03/Aug/2015:10:03:55] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:10:03:55]  got env var appcontext
+[03/Aug/2015:10:03:55]  APPCONTEXT has value chpy
+[03/Aug/2015:10:03:55]  got env var appcontext
+[03/Aug/2015:10:03:55]  APPCONTEXT has value chpy
+[03/Aug/2015:10:03:55]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:10:04:02]  got env var appcontext
+[03/Aug/2015:10:04:02]  APPCONTEXT has value chpy
+[03/Aug/2015:10:04:02] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:10:04:02]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:10:04:02]  got env var appcontext
+[03/Aug/2015:10:04:02]  APPCONTEXT has value chpy
+[03/Aug/2015:10:04:02] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:10:04:02]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:10:04:09]  got env var appcontext
+[03/Aug/2015:10:04:09]  APPCONTEXT has value chpy
+[03/Aug/2015:10:04:09]  got env var appcontext
+[03/Aug/2015:10:04:09]  APPCONTEXT has value chpy
+[03/Aug/2015:10:04:09]  got env var appcontext
+[03/Aug/2015:10:04:09]  APPCONTEXT has value chpy
+[03/Aug/2015:10:04:09]  HAS USERNAME2 KEY bpb
+[03/Aug/2015:10:04:12]  got env var appcontext
+[03/Aug/2015:10:04:12]  APPCONTEXT has value chpy
+[03/Aug/2015:10:04:12]  got env var appcontext
+[03/Aug/2015:10:04:12]  APPCONTEXT has value chpy
+[03/Aug/2015:10:04:12]  HAS USERNAME2 KEY None
+[03/Aug/2015:10:04:18]  got env var appcontext
+[03/Aug/2015:10:04:18]  APPCONTEXT has value chpy
+[03/Aug/2015:10:04:18] ENGINE Started monitor thread 'Session cleanup'.
+[03/Aug/2015:10:04:18]  HAS USERNAME KEY bpb
+[03/Aug/2015:10:04:18]  got env var appcontext
+[03/Aug/2015:10:04:18]  APPCONTEXT has value chpy
+[03/Aug/2015:10:04:18]  got env var appcontext
+[03/Aug/2015:10:04:18]  APPCONTEXT has value chpy
+[03/Aug/2015:10:04:18]  HAS USERNAME2 KEY bpb
