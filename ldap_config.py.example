@@ -1,0 +1,3 @@
+SERVER_NAME = "ldapserver.example.org"
+BASE_USER = "ou=People,dc=example,dc=org"
+USER_ATTR = "uid"

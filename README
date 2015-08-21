@@ -5,7 +5,14 @@ INSTALLATION:
 It is a web interface using cherrypy and jinja2 python libraries
 In fedora you should install python-cherrypy and python-jinja2 packages
 
-There is an example file for configuring the application with apache: chpy.conf.apache-example
+Copy example files:
+cp vacation_config_paths.py.example vacation_config_paths.py
+cp procmail_config_paths.py.example procmail_config_paths.py
+cp ldap_config.py.example ldap_config.py
+and modify them according to your configuration (at least: SERVER_NAME and BASE_USER in ldap_config.py and DOMAIN_NAME in procmail_config_paths.py)
+
+
+There is also an example file for configuring the application with apache: chpy.conf.apache-example
 (here set SetEnv appcontext variable to the application web context or change default appcontext = "chpy" in app.py, but this must be the same as the path of WSGIScriptAlias and should match the first part of the Alias /chpy/static) 
 
 In order to use procmail program set autoresponse_type to 'procmail' in app_config.py and to 'vacation' for vacation program

@@ -1,3 +1,5 @@
 /sessions/*
 /log/site.log
-
+/ldap_config.py
+/vacation_config_paths.py
+/procmail_config_paths.py
