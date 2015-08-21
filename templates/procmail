@@ -2,7 +2,7 @@ MAILDIR={{mailDir}}
 ORGMAIL=$MAILDIR
 SENDMAIL={{sendmailPath}}
 :0
-* ^TO_{{username}}@{{domainname}}
+* ^TO:{{username}}@{{domainname}}
 * !^FROM_DAEMON
   {
    :0 h c
