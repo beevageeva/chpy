@@ -19,7 +19,7 @@ It uses mod_wsgi (in fedora you must install mod_wsgi package)
 In order to use procmail program set autoresponse_type to 'procmail' in app_config.py and to 'vacation' for vacation program
 and modify procmail_config_paths.py and vacation_config_paths.py accordingly
 
-User authentication is done with ldap so insttall python ldap library (in fedora python-ldap package) and modify  ldap settings in ldap_config.py
+User authentication is done with ldap so install python ldap library (in fedora python-ldap package) and modify  ldap settings in ldap_config.py
 Make sure apache has read permission on all folder and write permission for log/site.log (where application logging goes), folder sessions where client sessions are kept and to the folders defined in *_config_paths.py where forward, procmail, message files are kept (in the case of vacation program the message file is .vacation.msg in the user home and this cannot be changed with the current version of vacation program)
 
 
