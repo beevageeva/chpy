@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+   <head>
+			<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+   </head>
+   <body>
+		 LOGGED IN: {{username}} (<a href="logout"> Logout </a>)
+		<hr/>
+		<div align="center" style="color: red">
+			{{message}}
+		</div>
+		<div align="center">
+		
+		    {% block content %}
+        {% endblock %}
+
+
+		
+
+		</div>
+
+		<form action="generate" method="post">
+		Message: 
+		<textarea name="msg" rows="10" cols="60">{{ msg if msg else ""}}</textarea>		
+		<br/>
+		<input type="submit" value="generate"/>
+		</form>			
+		<br/>
+		<a href="delete?action=keep"> Delete (keep msg file) </a>
+		<a href="delete?action=del"> Delete (delete msg file) </a>
+
+
+
+   </body>
+</html>
