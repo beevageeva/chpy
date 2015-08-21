@@ -13,6 +13,7 @@ and modify them according to your configuration (at least: SERVER_NAME and BASE_
 
 
 There is also an example file for configuring the application with apache: chpy.conf.apache-example
+It uses mod_wsgi (in fedora you must install mod_wsgi package)
 (here set SetEnv appcontext variable to the application web context or change default appcontext = "chpy" in app.py, but this must be the same as the path of WSGIScriptAlias and should match the first part of the Alias /chpy/static) 
 
 In order to use procmail program set autoresponse_type to 'procmail' in app_config.py and to 'vacation' for vacation program
