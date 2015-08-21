@@ -8,6 +8,11 @@
 			AddOutputFilterByType DEFLATE text/html text/css text/plain
     </Directory>
 
+    <Directory /var/www/chpy/>
+      Require all granted
+    </Directory>
+
+
 
     WSGIScriptAlias /chpy /var/www/chpy/app.py
 		SetEnv appcontext chpy
